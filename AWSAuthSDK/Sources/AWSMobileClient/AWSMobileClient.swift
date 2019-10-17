@@ -447,12 +447,8 @@ final public class AWSMobileClient: _AWSMobileClient {
                                              webDomain: hostURL,
                                              identityProvider: identityProvider,
                                              idpIdentifier: idpIdentifier,
-                                             signInUri: signInURI,
-                                             signOutUri: signOutURI,
-                                             tokensUri: tokensURI,
-                                             signInUriQueryParameters: self.signInURIQueryParameters,
-                                             signOutUriQueryParameters: self.signOutURIQueryParameters,
-                                             tokenUriQueryParameters: self.tokenURIQueryParameters)
+                                             userPoolIdForEnablingASF: nil,
+                                             enableSFAuthSessionIfAvailable: false)
 
             if (isCognitoAuthRegistered) {
                 AWSCognitoAuth.remove(forKey: CognitoAuthRegistrationKey)
